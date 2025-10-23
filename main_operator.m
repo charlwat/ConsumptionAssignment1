@@ -1,4 +1,20 @@
 % VFI_Assignment.m (Final optimized version)
+
+a_min = 0;
+a_max = 10;
+num_points_a = 100;
+
+y_min = -5;
+y_max = 5;
+num_points_y = 50;
+
+a_grid = linspace(a_min, a_max, num_points_a);
+y_grid = linspace(y_min, y_max, num_points_y);
+
+%% Initialize Value Function
+n_a = length(a_grid);
+n_y = length(y_grid);
+V = zeros(n_a, n_y); % Initialize value function matrix
 clear; close all; clc;
 
 %% Parameter Calibration
